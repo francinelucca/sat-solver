@@ -1,0 +1,419 @@
+Starting experiment, current time: 16:22:30 GMT-0400 (Eastern Daylight Time)
+Running experiment with ratio = 3, N = 40 L = 120
+====================================================
+SATISFIED
+100/100
+====================================================
+RANDOM RESULTS
+Median time: 3
+Median DPLL iterations: 327
+====================================================
+TWOCLAUSE RESULTS
+Median time: 2
+Median DPLL iterations: 241.5
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 22.5
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+1
+TwoClause: 
+2
+Optimized: 
+0
+
+
+Running experiment with ratio = 3.2, N = 40 L = 128
+====================================================
+SATISFIED
+100/100
+====================================================
+RANDOM RESULTS
+Median time: 7.5
+Median DPLL iterations: 1074.5
+====================================================
+TWOCLAUSE RESULTS
+Median time: 4
+Median DPLL iterations: 516
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 24
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+3
+Optimized: 
+0
+
+
+Running experiment with ratio = 3.4, N = 40 L = 136
+====================================================
+SATISFIED
+100/100
+====================================================
+RANDOM RESULTS
+Median time: 8
+Median DPLL iterations: 977
+====================================================
+TWOCLAUSE RESULTS
+Median time: 6
+Median DPLL iterations: 921.5
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 22
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+1
+Optimized: 
+0
+
+
+Running experiment with ratio = 3.6, N = 40 L = 144
+====================================================
+SATISFIED
+100/100
+====================================================
+RANDOM RESULTS
+Median time: 7.5
+Median DPLL iterations: 1039
+====================================================
+TWOCLAUSE RESULTS
+Median time: 10.5
+Median DPLL iterations: 1452.5
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 26
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 3.8, N = 40 L = 152
+====================================================
+SATISFIED
+93/100
+====================================================
+RANDOM RESULTS
+Median time: 16.5
+Median DPLL iterations: 2243
+====================================================
+TWOCLAUSE RESULTS
+Median time: 13
+Median DPLL iterations: 1838
+====================================================
+OPTIMIZED RESULTS
+Median time: 1
+Median DPLL iterations: 27
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 4, N = 40 L = 160
+====================================================
+SATISFIED
+84/100
+====================================================
+RANDOM RESULTS
+Median time: 25
+Median DPLL iterations: 3410.5
+====================================================
+TWOCLAUSE RESULTS
+Median time: 14
+Median DPLL iterations: 1991
+====================================================
+OPTIMIZED RESULTS
+Median time: 1
+Median DPLL iterations: 43.5
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 4.2, N = 40 L = 168
+====================================================
+SATISFIED
+61/100
+====================================================
+RANDOM RESULTS
+Median time: 26
+Median DPLL iterations: 3186.5
+====================================================
+TWOCLAUSE RESULTS
+Median time: 21.5
+Median DPLL iterations: 3028
+====================================================
+OPTIMIZED RESULTS
+Median time: 1
+Median DPLL iterations: 66
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 4.4, N = 40 L = 176
+====================================================
+SATISFIED
+44/100
+====================================================
+RANDOM RESULTS
+Median time: 53
+Median DPLL iterations: 5441.5
+====================================================
+TWOCLAUSE RESULTS
+Median time: 39.5
+Median DPLL iterations: 5354.5
+====================================================
+OPTIMIZED RESULTS
+Median time: 2
+Median DPLL iterations: 85
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 4.6, N = 40 L = 184
+====================================================
+SATISFIED
+34/100
+====================================================
+RANDOM RESULTS
+Median time: 73
+Median DPLL iterations: 7464.5
+====================================================
+TWOCLAUSE RESULTS
+Median time: 40
+Median DPLL iterations: 4759.5
+====================================================
+OPTIMIZED RESULTS
+Median time: 4
+Median DPLL iterations: 156
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 4.8, N = 40 L = 192
+====================================================
+SATISFIED
+12/100
+====================================================
+RANDOM RESULTS
+Median time: 98.5
+Median DPLL iterations: 9024
+====================================================
+TWOCLAUSE RESULTS
+Median time: 38
+Median DPLL iterations: 4257
+====================================================
+OPTIMIZED RESULTS
+Median time: 5
+Median DPLL iterations: 168
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 5, N = 40 L = 200
+====================================================
+SATISFIED
+15/100
+====================================================
+RANDOM RESULTS
+Median time: 79
+Median DPLL iterations: 6179
+====================================================
+TWOCLAUSE RESULTS
+Median time: 31.5
+Median DPLL iterations: 3310
+====================================================
+OPTIMIZED RESULTS
+Median time: 4
+Median DPLL iterations: 141
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 5.2, N = 40 L = 208
+====================================================
+SATISFIED
+5/100
+====================================================
+RANDOM RESULTS
+Median time: 72
+Median DPLL iterations: 5213
+====================================================
+TWOCLAUSE RESULTS
+Median time: 26
+Median DPLL iterations: 2526
+====================================================
+OPTIMIZED RESULTS
+Median time: 5
+Median DPLL iterations: 144
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 5.4, N = 40 L = 216
+====================================================
+SATISFIED
+2/100
+====================================================
+RANDOM RESULTS
+Median time: 63.5
+Median DPLL iterations: 4357
+====================================================
+TWOCLAUSE RESULTS
+Median time: 24
+Median DPLL iterations: 2223
+====================================================
+OPTIMIZED RESULTS
+Median time: 4
+Median DPLL iterations: 127
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 5.6, N = 40 L = 224
+====================================================
+SATISFIED
+0/100
+====================================================
+RANDOM RESULTS
+Median time: 62
+Median DPLL iterations: 3631
+====================================================
+TWOCLAUSE RESULTS
+Median time: 22
+Median DPLL iterations: 1682
+====================================================
+OPTIMIZED RESULTS
+Median time: 5
+Median DPLL iterations: 121
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 5.8, N = 40 L = 232
+====================================================
+SATISFIED
+0/100
+====================================================
+RANDOM RESULTS
+Median time: 53
+Median DPLL iterations: 2901
+====================================================
+TWOCLAUSE RESULTS
+Median time: 20.5
+Median DPLL iterations: 1571
+====================================================
+OPTIMIZED RESULTS
+Median time: 4
+Median DPLL iterations: 110
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Running experiment with ratio = 6, N = 40 L = 240
+====================================================
+SATISFIED
+2/100
+====================================================
+RANDOM RESULTS
+Median time: 51.5
+Median DPLL iterations: 2460
+====================================================
+TWOCLAUSE RESULTS
+Median time: 18
+Median DPLL iterations: 1215
+====================================================
+OPTIMIZED RESULTS
+Median time: 4
+Median DPLL iterations: 100
+====================================================
+TIMED OUT EXPERIMENTS
+Random: 
+0
+TwoClause: 
+0
+Optimized: 
+0
+
+
+Finishing experiment, current time: 16:27:42 GMT-0400 (Eastern Daylight Time) 
+ElapsedTime: 311571ms
