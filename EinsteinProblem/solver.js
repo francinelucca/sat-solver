@@ -66,21 +66,21 @@ function solve(solver = 'RANDOM'|'TWOCLAUSE'|'OPTIMIZED'|'ALL') {
 
     var file = fs.createWriteStream(dimacsFilePath);
     encodedLines.forEach(function (v) { file.write(v + '\n'); });
-    file.end(() => {
+    file.end(async () => {
         switch(solver){
             case 'RANDOM':
-                lines.push(...getResultLogs("RANDOM SAT SOLVER", solveSAT(dimacsFilePath, 'RANDOM'),variableMapper, variableDictionary))
+                lines.push(...getResultLogs("RANDOM SAT SOLVER", await solveSAT(dimacsFilePath, 'RANDOM', false),variableMapper, variableDictionary))
                 break
             case 'TWOCLAUSE':
-                lines.push(...getResultLogs("TWO CLAUSE SAT SOLVER", solveSAT(dimacsFilePath, 'TWOCLAUSE'),variableMapper, variableDictionary))
+                lines.push(...getResultLogs("TWO CLAUSE SAT SOLVER", await solveSAT(dimacsFilePath, 'TWOCLAUSE', false),variableMapper, variableDictionary))
                 break
             case 'OPTIMIZED':
-                lines.push(...getResultLogs("OPTIMIZED SAT SOLVER", solveSAT(dimacsFilePath, 'OPTIMIZED'),variableMapper, variableDictionary))
+                lines.push(...getResultLogs("OPTIMIZED SAT SOLVER", await solveSAT(dimacsFilePath, 'OPTIMIZED', false),variableMapper, variableDictionary))
                 break
             case 'ALL':
-                lines.push(...getResultLogs("RANDOM SAT SOLVER", solveSAT(dimacsFilePath, 'RANDOM'),variableMapper, variableDictionary))
-                lines.push(...getResultLogs("TWO CLAUSE SAT SOLVER", solveSAT(dimacsFilePath, 'TWOCLAUSE'),variableMapper, variableDictionary))
-                lines.push(...getResultLogs("OPTIMIZED SAT SOLVER", solveSAT(dimacsFilePath, 'OPTIMIZED'),variableMapper, variableDictionary))
+                lines.push(...getResultLogs("RANDOM SAT SOLVER", await solveSAT(dimacsFilePath, 'RANDOM', false),variableMapper, variableDictionary))
+                lines.push(...getResultLogs("TWO CLAUSE SAT SOLVER", await solveSAT(dimacsFilePath, 'TWOCLAUSE', false),variableMapper, variableDictionary))
+                lines.push(...getResultLogs("OPTIMIZED SAT SOLVER", await solveSAT(dimacsFilePath, 'OPTIMIZED', false),variableMapper, variableDictionary))
         }
     
     

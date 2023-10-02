@@ -40,22 +40,22 @@ function getResultLogs(name, results){
  * @param {string} filePath - Path to DIMACS file.
  * @param {string} solver - which solver(s) to use to resolve the problem
  */
- function solve(filePath, solver = 'RANDOM'|'TWOCLAUSE'|'OPTIMIZED'|'ALL') {
+ async function solve(filePath, solver = 'RANDOM'|'TWOCLAUSE'|'OPTIMIZED'|'ALL') {
     const lines = []
     switch(solver){
         case 'RANDOM':
-            lines.push(...getResultLogs("RANDOM SAT SOLVER",solveSAT(filePath, 'RANDOM')))
+            lines.push(...getResultLogs("RANDOM SAT SOLVER", await solveSAT(filePath, 'RANDOM', false)))
             break
         case 'TWOCLAUSE':
-            lines.push(...getResultLogs("TWO CLAUSE SAT SOLVER",solveSAT(filePath, 'TWOCLAUSE')))
+            lines.push(...getResultLogs("TWO CLAUSE SAT SOLVER",await solveSAT(filePath, 'TWOCLAUSE', false)))
             break
         case 'OPTIMIZED':
-            lines.push(...getResultLogs("OPTIMIZED SAT SOLVER",solveSAT(filePath, 'OPTIMIZED')))
+            lines.push(...getResultLogs("OPTIMIZED SAT SOLVER", await solveSAT(filePath, 'OPTIMIZED', false)))
             break
         case 'ALL':
-            lines.push(...getResultLogs("RANDOM SAT SOLVER",solveSAT(filePath, 'RANDOM')))
-            lines.push(...getResultLogs("TWO CLAUSE SAT SOLVER",solveSAT(filePath, 'TWOCLAUSE')))
-            lines.push(...getResultLogs("OPTIMIZED SAT SOLVER",solveSAT(filePath, 'OPTIMIZED')))
+            lines.push(...getResultLogs("RANDOM SAT SOLVER", await solveSAT(filePath, 'RANDOM', false)))
+            lines.push(...getResultLogs("TWO CLAUSE SAT SOLVER", await solveSAT(filePath, 'TWOCLAUSE', false)))
+            lines.push(...getResultLogs("OPTIMIZED SAT SOLVER", await solveSAT(filePath, 'OPTIMIZED', false)))
     }
 
     var file = fs.createWriteStream('./test-results.txt');

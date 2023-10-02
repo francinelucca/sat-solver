@@ -1,7 +1,8 @@
 const fs = require('fs')
 const { getRandomNumberInRange, restartSeed } = require('./randomizer');
 
-let experimentsLeft = 4800
+// number of DPLL calls to run before quitting a formula SAT solving run
+const TIMEOUT_LIMIT_ITERATIONS = 150000
 
 /**
  * Generates an array of clauses compatible with DPLL algorithm from a given filePath
@@ -26,17 +27,17 @@ function parseDIMACSInput(filePath) {
  * @param {string} filePath - Path to DIMACS file.
 * @returns {Promise<{results: {string | Record<number, boolean>}, iterations: number, time: string }>} results containing satisfying assignments if satisfiable, 'UNSAT' otherwise, number of DPLL iterations the algorithm ran and time it took to run in miliseconds
  */
-function solve(path, solver = 'RANDOM' | 'TWOCLAUSE' | 'OPTIMIZED') {
+async function solve(path, solver = 'RANDOM' | 'TWOCLAUSE' | 'OPTIMIZED', timeout = true) {
     restartSeed()
 
     const clauses = parseDIMACSInput(path)
     switch (solver) {
         case 'RANDOM':
-            return RandomSATSolver(clauses)
+            return RandomSATSolver(clauses, timeout)
         case 'TWOCLAUSE':
-            return TwoClauseSATSolver(clauses)
+            return TwoClauseSATSolver(clauses, timeout)
         case 'OPTIMIZED':
-            return OptimizedSATSolver(clauses)
+            return OptimizedSATSolver(clauses, timeout)
     }
 }
 
@@ -62,7 +63,7 @@ function simplifyByProp(prop, clauses) {
  * @param {number[][]} - Set of clauses (formula) to evaluate
  * @returns {Promsie<{results: {string | Record<number, boolean>}, iterations: number, time: string }>} results containing satisfying assignments if satisfiable, 'UNSAT' otherwise, number of DPLL iterations the algorithm ran and time it took to run in miliseconds
  */
-async function RandomSATSolver(clauses) {
+async function RandomSATSolver(clauses, timeout = true) {
     const startTime = (new Date()).getTime()
     let counter = 1
 
@@ -75,7 +76,7 @@ async function RandomSATSolver(clauses) {
      */
     async function DPLL(clauses, assignments = {}) {
         counter++
-        if(counter > 100000){
+        if(timeout && counter > TIMEOUT_LIMIT_ITERATIONS){
             return 'TIMEOUT'
         }
         const localAssignments = { ...assignments }
@@ -133,9 +134,6 @@ async function RandomSATSolver(clauses) {
 
     return new Promise(async resolve => {
         const result = await DPLL(clauses)
-
-        experimentsLeft--
-        console.log(`experiments left: ${experimentsLeft}/4800`)
         resolve({ result, iterations: counter, time: ((new Date).getTime() - startTime) })
     })
 }
@@ -148,7 +146,7 @@ async function RandomSATSolver(clauses) {
  * @param {number[][]} - Set of clauses (formula) to evaluate
  * @returns {Promise<{results: {string | Record<number, boolean>}, iterations: number, time: string }>} results containing satisfying assignments if satisfiable, 'UNSAT' otherwise, number of DPLL iterations the algorithm ran and time it took to run in miliseconds
  */
-async function TwoClauseSATSolver(clauses) {
+async function TwoClauseSATSolver(clauses, timeout = true) {
     const startTime = (new Date()).getTime()
     let counter = 1
 
@@ -161,7 +159,7 @@ async function TwoClauseSATSolver(clauses) {
      */
     async function DPLL(clauses, assignments = {}) {
         counter++
-        if(counter > 100000){
+        if(timeout && counter > TIMEOUT_LIMIT_ITERATIONS){
             return 'TIMEOUT'
         }
         const localAssignments = { ...assignments }
@@ -239,7 +237,6 @@ async function TwoClauseSATSolver(clauses) {
     return new Promise(async resolve => {
         const result = await DPLL(clauses)
 
-        experimentsLeft--
         resolve({ result, iterations: counter, time: ((new Date).getTime() - startTime) })
     })
 }
@@ -255,7 +252,7 @@ async function TwoClauseSATSolver(clauses) {
  * @param {number[][]} - Set of clauses (formula) to evaluate
  * @returns {Promise<{results: {string | Record<number, boolean>}, iterations: number, time: string }>} results containing satisfying assignments if satisfiable, 'UNSAT' otherwise, number of DPLL iterations the algorithm ran and time it took to run in miliseconds
  */
-async function OptimizedSATSolver(clauses) {
+async function OptimizedSATSolver(clauses, timeout = true) {
     const startTime = (new Date()).getTime()
     let counter = 1
 
@@ -268,7 +265,7 @@ async function OptimizedSATSolver(clauses) {
      */
     async function DPLL(clauses, assignments = {}) {
         counter++
-        if(counter > 100000){
+        if(timeout && counter > TIMEOUT_LIMIT_ITERATIONS){
             return 'TIMEOUT'
         }
         const localAssignments = { ...assignments }
@@ -342,8 +339,6 @@ async function OptimizedSATSolver(clauses) {
         })
         
         const result = await DPLL(clauses, assignments)
-
-        experimentsLeft--
     
         resolve({ result, iterations: counter, time: ((new Date).getTime() - startTime) })
     })

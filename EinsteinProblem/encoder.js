@@ -1,4 +1,5 @@
 
+// maps a variable number to a constraint in the Einstein problem
 const variableDictionary = {
     1: "HOUSE_1",
     2: "HOUSE_2",

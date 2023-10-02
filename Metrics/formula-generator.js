@@ -1,6 +1,14 @@
 
 const {getRandomNumberInRange} = require('../randomizer')
 
+/**
+ * Generates a random K-CNF SAT formula given a number of variables and clauses.
+ * 
+ * @param {number} varNums - Number of variables to use to generate random formula.
+ * @param {number} clauseNums - Number of clauses to use to generate random formula.
+ * @param {number} k  - Number of variables that should be contained in a clause.
+ * @returns {number[][]} formula represented as array of clauses 
+ */
 function getRandomFormula(varNums, clauseNums, k = 3){
     const clauses = []
 
