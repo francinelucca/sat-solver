@@ -1,0 +1,381 @@
+Starting experiment, current time: 13:23:03 GMT-0500 (Eastern Standard Time) 
+Experiment with ratio = 1, N = 30 L = 30
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 18
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 17
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 1.2, N = 30 L = 36
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 19.5
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 18
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 1.4, N = 30 L = 42
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 20
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 19
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 1.6, N = 30 L = 48
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 21
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 19
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 1.8, N = 30 L = 54
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 21
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 19
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 2, N = 30 L = 60
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 21
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 19
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 2.2, N = 30 L = 66
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 21
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 19
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 2.4, N = 30 L = 72
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 20.5
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 18
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 2.6, N = 30 L = 78
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 21
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 17
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 2.8, N = 30 L = 84
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 20
+====================================================
+CDCL RESULTS
+Median time: 0
+Median DPLL iterations: 17
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 3, N = 30 L = 90
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 20
+====================================================
+CDCL RESULTS
+Median time: 1
+Median DPLL iterations: 17
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 3.2, N = 30 L = 96
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 22
+====================================================
+CDCL RESULTS
+Median time: 1
+Median DPLL iterations: 16
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 3.4, N = 30 L = 102
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 25
+====================================================
+CDCL RESULTS
+Median time: 1
+Median DPLL iterations: 16
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 3.6, N = 30 L = 108
+====================================================
+SATISFIED
+100/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 0
+Median DPLL iterations: 26
+====================================================
+CDCL RESULTS
+Median time: 1
+Median DPLL iterations: 14.5
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 3.8, N = 30 L = 114
+====================================================
+SATISFIED
+96/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 1
+Median DPLL iterations: 34.5
+====================================================
+CDCL RESULTS
+Median time: 1
+Median DPLL iterations: 14
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 4, N = 30 L = 120
+====================================================
+SATISFIED
+93/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 1
+Median DPLL iterations: 47
+====================================================
+CDCL RESULTS
+Median time: 1
+Median DPLL iterations: 15
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 4.2, N = 30 L = 126
+====================================================
+SATISFIED
+81/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 1
+Median DPLL iterations: 50
+====================================================
+CDCL RESULTS
+Median time: 1
+Median DPLL iterations: 14
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Experiment with ratio = 4.4, N = 30 L = 132
+====================================================
+SATISFIED
+76/100
+====================================================
+OPTIMIZED RESULTS
+Median time: 1
+Median DPLL iterations: 79
+====================================================
+CDCL RESULTS
+Median time: 1
+Median DPLL iterations: 14
+====================================================
+TIMED OUT EXPERIMENTS
+CDCL: 
+0
+Optimized: 
+0
+====================================================
+
+
+Finishing experiment, current time: 13:25:17 GMT-0500 (Eastern Standard Time) 
+ElapsedTime: 133556ms

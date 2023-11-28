@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { solve: solveSAT } = require("./sat-solver");
+const { restartSeed } = require("./randomizer");
 
 /**
  * Given a result metric for a SAT problem, creates a readable format for the results
@@ -14,11 +15,11 @@ function getResultLogs(name, results){
 
     lines.push(name)
     lines.push("====================================================")
-    const trueProps = Object.entries(results.result).filter(([_, value]) => value).map(([sol]) => sol)
+    const trueProps = results.result === 'UNSAT'? 'UNSAT' : Object.entries(results.result).filter(([_, value]) => value).map(([sol]) => sol)
     lines.push("")
     lines.push("Propositions assigned true: ")
     lines.push(trueProps) 
-    const falseProps = Object.entries(results.result).filter(([_, value]) => !value).map(([sol]) => sol)
+    const falseProps = results.result === 'UNSAT'? 'UNSAT' : Object.entries(results.result).filter(([_, value]) => !value).map(([sol]) => sol)
     lines.push("")
     lines.push("Propositions assigned false: ")
     lines.push(falseProps) 
@@ -40,7 +41,7 @@ function getResultLogs(name, results){
  * @param {string} filePath - Path to DIMACS file.
  * @param {string} solver - which solver(s) to use to resolve the problem
  */
- async function solve(filePath, solver = 'RANDOM'|'TWOCLAUSE'|'OPTIMIZED'|'ALL') {
+ async function solve(filePath, solver = 'RANDOM'|'TWOCLAUSE'|'OPTIMIZED'|'CDCL'|'ALL') {
     const lines = []
     switch(solver){
         case 'RANDOM':
@@ -52,10 +53,14 @@ function getResultLogs(name, results){
         case 'OPTIMIZED':
             lines.push(...getResultLogs("OPTIMIZED SAT SOLVER", await solveSAT(filePath, 'OPTIMIZED', false)))
             break
+        case 'CDCL':
+        lines.push(...getResultLogs("CDCL SAT SOLVER", await solveSAT(filePath, 'CDCL', false)))
+        break
         case 'ALL':
             lines.push(...getResultLogs("RANDOM SAT SOLVER", await solveSAT(filePath, 'RANDOM', false)))
             lines.push(...getResultLogs("TWO CLAUSE SAT SOLVER", await solveSAT(filePath, 'TWOCLAUSE', false)))
             lines.push(...getResultLogs("OPTIMIZED SAT SOLVER", await solveSAT(filePath, 'OPTIMIZED', false)))
+            lines.push(...getResultLogs("CDCL SAT SOLVER", await solveSAT(filePath, 'CDCL', false)))
     }
 
     var file = fs.createWriteStream('./test-results.txt');
@@ -64,6 +69,8 @@ function getResultLogs(name, results){
     file.end();
 }
 
+
+restartSeed()
 // switch second parameter to one of the following to test for a single solver 
 // instead of all: 'RANDOM', 'TWOCLAUSE', 'OPTIMIZED'
 solve('test.txt', 'ALL')
